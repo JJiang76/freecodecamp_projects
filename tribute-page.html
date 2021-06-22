@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<style>
+	body {
+		background-color: lightpink;
+	}
+	h1 {
+		text-align: center;
+	}
+	h3 {
+		color: black;
+	}
+	h3:hover {
+		color: blue;
+	}
+	.container {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 1fr 8fr;
+		grid-template-areas: 
+			"header header"
+			"content image";	
+	}
+	.header {
+		grid-area: header;
+		background-color: lightblue;
+	}
+	.content {
+		grid-area: content;
+	}
+	#img-div {
+		grid-area: image;
+	}
+	#image {
+		width: 100%;
+		height: auto;
+		max-width: 3024px;
+		margin-left: auto;
+  		margin-right: auto;
+  		display: block;
+	}
+</style>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title id="title">Tribute to Bella</title>
+</head>
+<body>
+	<div class="container" id="main">
+		<div class="header">
+			<h1>Tribute Page for Bella</h1>
+		</div>
+
+		<div id="img-div">
+			<img id="image" src="bella.jpg">
+			<figcaption id="img-caption">Picture of Bella</figcaption>
+		</div>
+
+		<div class="content" id="tribute-info">
+			<h2>Things I Like about Bella:</h2>
+			<ul>
+				<li>She is very cute</li>
+				<li>She sleeps like a baby</li>
+				<li>She is very funny</li>
+			</ul>
+			<h3>
+				<a href="http://www.beaglepro.com/baby-beagle" target="_blank" id="tribute-link">To learn more about Bellas, click here!</a>
+			</h3>
+		</div>
+	</div>
+</body>
+</html>
