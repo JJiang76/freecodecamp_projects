@@ -15,10 +15,6 @@
 		display: flex;
 		flex-direction: column;
 	}
-	#main {
-		display: flex;
-		justify-content: center;
-	}
 </style>
 
 <html>
@@ -41,10 +37,10 @@
 			<input type="number" id="number" placeholder="love" min="0" max="10" name="love">
 
 			<p>What is Bella's favorite food?</p>
-			<label for="pb"><input type="radio" id="pb" name="food"> Peanut butter</label>
-			<label for="beef"><input type="radio" id="beef" name="food"> Beef (stew)</label>
-			<label for="eggs"><input type="radio" id="eggs" name="food"> Eggs</label>
-			<label for="poop"><input type="radio" id="poop" name="food"> Poopies</label>
+			<label for="pb"><input type="radio" id="pb" name="food" value="pb"> Peanut butter</label>
+			<label for="beef"><input type="radio" id="beef" name="food" value="beef"> Beef (stew)</label>
+			<label for="eggs"><input type="radio" id="eggs" name="food" value="eggs"> Eggs</label>
+			<label for="poop"><input type="radio" id="poop" name="food" value="poop"> Poopies</label>
 
 			<p>What are Bella's favorite activities? (Select all that apply)</p>
 			<label for="sleep"><input type="checkbox" id="sleep" name="activity" value="sleep"> Sleeping</label>
@@ -52,9 +48,18 @@
 			<label for="bath"><input type="checkbox" id="bath" name="activity" value="bath"> Taking a bath</label>
 			<label for="salon"><input type="checkbox" id="salon" name="activity" value="salon"> Going to the salon</label>
 
+			<label for="friends">Who is Bella's best friend?</label>
+			<select id="dropdown" name="friends">
+				<option disabled selected value> -- select an option -- </option>
+				<option value="Jason">Jason</option>
+				<option value="Brookie">Brookie</option>
+				<option value="Cony">Cony</option>	
+				<option value="Mom">Momo</option>
+			</select>
+
 			<p>Additional comments:</p>
 			<textarea name="comments" cols=4 rows=7></textarea>
-			<button type="submit">Submit</button>
+			<button type="submit" id="submit">Submit</button>
 
 		</form>
 	</div>
